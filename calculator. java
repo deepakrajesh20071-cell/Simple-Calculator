@@ -1,0 +1,66 @@
+import java.util.Scanner;
+class Calculator{
+	double num1,num2;
+	int choice;
+//function for reading numbers from user
+	void readnumber()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the first number");
+		num1=sc.nextDouble();
+		System.out.println("Enter the second number");
+		num2=sc.nextDouble();
+	}
+//function for select the mode of operation.
+	void choice()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter 1 for Addition");
+   	System.out.println("Enter 2 for Substraction");
+   	System.out.println("Enter 3 for Multiplication");
+   	System.out.println("Enter 4 for Division");
+   	choice=sc.nextInt();
+   }	
+   	
+  //function for calculation.
+   void calc()
+ 	{
+ 	 		switch(choice)
+ 	 		{
+ 	 			case 1:	System.out.println(num1+num2);
+ 	 			break;
+                  case 2:System.out.println(num1-num2);
+                  break;
+ 	        	case 3:System.out.println(num1*num2);
+ 	        	break;
+ 	    	    case 4:if (num2 != 0) {
+                    System.out.println("Result: " + (num1 / num2));
+                } 
+                else {
+                    System.out.println("Error: Division by zero!");
+ 	    	    break;
+                }
+ 	    	    
+ 	
+ 	 		}
+} 	 		
+ //main
+public static void main(String[] args)
+{
+ 	 		Calculator c=new Calculator();
+ 	 		c.readnumber();
+ 	 		c.choice();
+ 	 		c.calc();
+}
+}
+ 	 		
+ 	 		
+ 	 		
+ 	 		
+ 	 		
+ 	 		
+ 	 		
+ 	 		
+ 	 		
+ 	 		
+ 	 		
